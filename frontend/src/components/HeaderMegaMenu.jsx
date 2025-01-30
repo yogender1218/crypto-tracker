@@ -74,7 +74,7 @@ export function HeaderMegaMenu() {
         <Group h="100%" w="100%"  justify="space-between" >
           {/* Left Section - Logo & Brand Name */}
           <Group align="center" gap="xs"  style={{paddingLeft:'3.1vw'}} >
-            <img src="./omi.png" alt="Logo" className={classes.logo} />
+            <img src="./public/TradeSense/omi.png" alt="Logo" className={classes.logo} />
             <Text fw={500}>TradeSense</Text>
           </Group>
 
