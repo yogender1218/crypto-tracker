@@ -1,40 +1,43 @@
+/* Updated CSS */
 .header {
   height: 60px;
-  padding-left:10vw;
-  padding-right: 10vw;
-  border-bottom: 0px solid var(--mantine-color-gray-3);
   z-index: 100;
-  backdrop-filter: blur(10px) ;
+  backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .link {
   display: flex;
   align-items: center;
   height: 100%;
-  padding-left: var(--mantine-spacing-md);
-  padding-right: var(--mantine-spacing-md);
+  padding: 1vw;
   text-decoration: none;
-  color: var(--mantine-color-black);
+  color: rgb(250, 250, 250);
   font-weight: 500;
-  font-size: var(--mantine-font-size-sm);
+  font-size: 15px;
+  transition: color 0.2s ease;
 }
 
-.subLink {
-  width: 100%;
-  padding: var(--mantine-spacing-xs) var(--mantine-spacing-md);
-  border-radius: var(--mantine-radius-md);
+.link:hover {
+  color: var(--mantine-color-blue-5);
+}
+
+.logo {
+  height: 24px;
+  width: 24px;
 }
 
 .themeToggle {
   background: transparent;
   border: none;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px;
+  color: inherit;
+  padding-right: 3vw;
 }
 
 .dark-theme {
@@ -53,3 +56,18 @@
 .dark-theme .subLink {
   background-color: var(--mantine-color-dark-6);
 }
+
+.logo{
+  height: 20px;
+  width: 20px;
+
+}
+.logoSize{
+  height: 80px;
+  width: 80px;
+}
+
+
+
+
+

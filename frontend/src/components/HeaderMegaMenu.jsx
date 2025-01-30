@@ -29,7 +29,6 @@ import {
   useMantineTheme
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './HeaderMegaMenu.module.css';
 import '@mantine/core/styles.css';
 
@@ -41,6 +40,7 @@ const mockdata = [
   { icon: IconChartPie3, title: 'Analytics', description: 'This Pokémon uses its flying ability to quickly chase' },
   { icon: IconNotification, title: 'Notifications', description: 'Combusken battles with the intensely hot flames it spews' },
 ];
+
 
 export function HeaderMegaMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
@@ -67,13 +67,19 @@ export function HeaderMegaMenu() {
     </UnstyledButton>
   ));
 
+
   return (
     <Box pb={120} className={darkMode ? classes.dark : ''}>
       <header className={classes.header}>
-        <Group justify="space-between" h="100%">
-          <MantineLogo size={30} />
+        <Group h="100%" w="100%"  justify="space-between" >
+          {/* Left Section - Logo & Brand Name */}
+          <Group align="center" gap="xs"  style={{paddingLeft:'3vw'}} >
+            <img src="../src/assets/TradeSense/omi.png" alt="Logo" className={classes.logo} />
+            <Text fw={500}>TradeSense</Text>
+          </Group>
 
-          <Group h="100%" gap={0} visibleFrom="sm">
+          {/* Center Section - Navigation Links */}
+          <Group h="100%" gap={0} visibleFrom="sm" justify="center" style={{ flexGrow: 1 }}>
             <a href="#" className={classes.link}>Home</a>
             <HoverCard width={600} position="bottom" radius="md" shadow="md"  withinPortal >
               <HoverCard.Target>
@@ -106,15 +112,16 @@ export function HeaderMegaMenu() {
             <a href="#" className={classes.link}>Academy</a>
           </Group>
 
-          <Group visibleFrom="sm">
-            <Button variant="default">Log in</Button>
+          {/* Right Section - Auth Buttons & Theme Toggle */}
+          <Group visibleFrom="sm" gap="sm">
+          <Button variant="default">Log in</Button>
             <Button>Sign up</Button>
             <button className={classes.themeToggle} onClick={toggleTheme}>
               {darkMode ? <IconSun size={22} /> : <IconMoon size={22} />}
             </button>
           </Group>
 
-          <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
+          <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" style={{ paddingRight:'3vw'}}/>
         </Group>
       </header>
 
@@ -132,7 +139,7 @@ export function HeaderMegaMenu() {
           <a href="#" className={classes.link}>Learn</a>
           <a href="#" className={classes.link}>Academy</a>
           <Divider my="sm" />
-          <Group justify="center" grow pb="xl" px="md">
+          <Group justify="center" grow pb="xl" px="md" >
             <Button variant="default">Log in</Button>
             <Button>Sign up</Button>
           </Group>
