@@ -1,28 +1,18 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { GoogleOAuthProvider } from '@react-oauth/google'; 
-import Register from './pages/Register';
-import Login from './pages/Login';
-import Home from './pages/Home';
-import About from './pages/About';
-import Learn from './pages/Learn';
-import Navbar from './components/Navbar';
+import { MantineProvider } from '@mantine/core';
+import './App.css';
+import { HeaderMegaMenu } from './components/HeaderMegaMenu';
+import { ScrollProgress } from './components/ui/scroll-progress';
+function App() {
 
-
-
-const App = () => (
-  <GoogleOAuthProvider clientId="YOUR_GOOGLE_CLIENT_ID">
-  <Router>
-    {/* <Navbar /> */}
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/learn" element={<Learn />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/login" element={<Login />} />
-    </Routes>
-  </Router>
-   </GoogleOAuthProvider>
-);
+  return (
+    <>
+          <div className='position'>
+          <HeaderMegaMenu></HeaderMegaMenu></div>
+          <ScrollProgress></ScrollProgress>
+          <h1 className="text-4xl text-center mt-10">Hello World</h1>
+          <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1>
+    </> 
+  )
+}
 
 export default App;
