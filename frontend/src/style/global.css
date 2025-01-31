@@ -8,7 +8,7 @@
 
 /* Dark Theme */
 [data-theme="dark"] {
-  --bg-color: #121212;
+  --bg-color: #000000;
   --text-color: #ffffff;
   --blur-bgcolor: rgba(18, 18, 18, 0.26);
 }
