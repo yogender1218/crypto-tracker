@@ -10,9 +10,8 @@ import {
   IconSwitchHorizontal,
   IconUser,
 } from '@tabler/icons-react';
-import { Center, Stack, Tooltip, UnstyledButton } from '@mantine/core';
-import { MantineLogo } from '@mantinex/mantine-logo';
-import classes from './NavbarMinimal.module.css';
+import {  Stack, Tooltip, UnstyledButton } from '@mantine/core';
+import classes from './NavBarMinimal.module.css';
 
 function NavbarLink({ icon: Icon, label, active, onClick }) {
   return (
