@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import {
   IconBook,
   IconChartPie3,
@@ -26,7 +26,6 @@ import {
   Text,
   ThemeIcon,
   UnstyledButton,
-  useMantineTheme
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderMegaMenu.module.css';
@@ -45,21 +44,26 @@ const mockdata = [
 export function HeaderMegaMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
-  const [darkMode, setDarkMode] = useState(false);
-  const theme = useMantineTheme();
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const toggleTheme = () => {
-    setDarkMode((prev) => !prev);
-    document.body.classList.toggle('dark-theme');
+    setTheme(theme === "light" ? "dark" : "light");
+    document.documentElement.setAttribute("data-theme", theme === "light" ? "dark" : "light");
   };
+  
 
   const links = mockdata.map((item) => (
-    <UnstyledButton className={classes.subLink} key={item.title}>
-      <Group wrap="nowrap" align="flex-start">
-        <ThemeIcon size={34} variant="default" radius="md">
-          <item.icon size={22} color={theme.colors.blue[6]} />
+    <UnstyledButton className={classes.subLink} key={item.title} style={{ padding:'2px'}}>
+      <Group wrap="nowrap" align="flex-start" style={{backdropFilter: 'blur(15px)', backgroundColor: 'var(--blur-bgcolor)', padding:'10px 20px', borderRadius:'10px'}} >
+        <ThemeIcon size={34} variant="default" radius="md" style={{marginTop:'2px'}}>
+          <item.icon size={22}  />
         </ThemeIcon>
-        <div>
+        <div >
           <Text size="sm" fw={500}>{item.title}</Text>
           <Text size="xs" c="dimmed">{item.description}</Text>
         </div>
@@ -69,12 +73,12 @@ export function HeaderMegaMenu() {
 
 
   return (
-    <Box pb={120} className={darkMode ? classes.dark : ''}>
+    <Box pb={120} >
       <header className={classes.header}>
         <Group h="100%" w="100%"  justify="space-between" >
           {/* Left Section - Logo & Brand Name */}
           <Group align="center" gap="xs"  style={{paddingLeft:'3.1vw'}} >
-            <img src="./public/TradeSense/omi.png" alt="Logo" className={classes.logo} />
+            <img src="/TradeSense/omi.png" alt="Logo" className={classes.logo} />
             <Text fw={500}>TradeSense</Text>
           </Group>
 
@@ -86,12 +90,12 @@ export function HeaderMegaMenu() {
                 <a href="#" className={classes.link}>
                   <Center inline>
                     <Box component="span" mr={5}>Features</Box>
-                    <IconChevronDown size={16} color={theme.colors.blue[6]} />
+                    <IconChevronDown size={16}  />
                   </Center>
                 </a>
               </HoverCard.Target>
-              <HoverCard.Dropdown style={{ overflow: 'hidden' }}>
-                <Group justify="space-between" px="md">
+              <HoverCard.Dropdown style={{ overflow: 'hidden', backdropFilter: 'blur(15px)', backgroundColor: 'var(--blur-bgcolor)' }}>
+                <Group justify="space-between" px="md"  >
                   <Text fw={500}>Features</Text>
                   <Anchor href="#" fz="xs">View all</Anchor>
                 </Group>
@@ -117,7 +121,7 @@ export function HeaderMegaMenu() {
           <Button variant="default">Log in</Button>
             <Button>Sign up</Button>
             <button className={classes.themeToggle} onClick={toggleTheme}>
-              {darkMode ? <IconSun size={22} /> : <IconMoon size={22} />}
+              {theme === "light" ? <IconMoon size={22} /> : <IconSun size={22} />}
             </button>
           </Group>
 
@@ -132,7 +136,7 @@ export function HeaderMegaMenu() {
           <UnstyledButton className={classes.link} onClick={toggleLinks}>
             <Center inline>
               <Box component="span" mr={5}>Features</Box>
-              <IconChevronDown size={16} color={theme.colors.blue[6]} />
+              <IconChevronDown size={16} color='blue'/>
             </Center>
           </UnstyledButton>
           <Collapse in={linksOpened}>{links}</Collapse>

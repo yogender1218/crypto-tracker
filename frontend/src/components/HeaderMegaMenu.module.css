@@ -17,7 +17,7 @@
   height: 100%;
   padding: 1vw;
   text-decoration: none;
-  color: rgb(250, 250, 250);
+  color: var(--text-color);
   font-weight: 500;
   font-size: 15px;
   transition: color 0.2s ease;
@@ -68,6 +68,13 @@
 }
 
 
+.hoverCard{
+  background-color: aliceblue;
+  background: red;
+}
 
+.mantine-HoverCard-dropdown{
+  background-color: rgb(1, 129, 241);
+  background: red;
 
-
+}

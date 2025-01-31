@@ -2,6 +2,7 @@ import { MantineProvider } from '@mantine/core';
 import './App.css';
 import { HeaderMegaMenu } from './components/HeaderMegaMenu';
 import { ScrollProgress } from './components/ui/scroll-progress';
+import "./style/global.css"; 
 function App() {
 
   return (
