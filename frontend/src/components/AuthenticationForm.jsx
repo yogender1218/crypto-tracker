@@ -15,7 +15,6 @@ import { useForm } from '@mantine/form';
 import { upperFirst, useToggle } from '@mantine/hooks';
 import { GoogleButton } from './GoogleButton';
 import { TwitterButton } from './TwitterButton';
-import { createContext, useState, useEffect } from "react";
 
 export function AuthenticationForm(props) {
   const [type, toggle] = useToggle(['login', 'register']);
@@ -34,14 +33,14 @@ export function AuthenticationForm(props) {
   });
 
   return (
-    <Paper radius="md" p="xl" withBorder {...props} style={{width: '700px', margin: 'auto', backgroundColor: 'var(--blur-bgcolor)', backdropFilter: 'blur(15px)'}}>
+    <Paper radius="md" p="xl" withBorder {...props} style={{width: '700px', margin: 'auto', backgroundColor: 'var(--blur-bgcolor)', backdropFilter: 'blur(15px)', borderColor:'var(--border-color)', boxShadow:'var(--box-shadow)'}}>
       <Text size="lg" fw={500}>
         Welcome to TradeSense, {type} with
       </Text>
 
       <Group grow mb="md" mt="md">
-        <GoogleButton radius="xl" style={{backgroundColor: 'var(--blur-bgcolor)', backdropFilter: 'blur(15px)'}}>Google</GoogleButton>
-        <TwitterButton radius="xl" style={{backgroundColor: 'var(--blur-bgcolor)', backdropFilter: 'blur(15px)'}}>Twitter</TwitterButton>
+        <GoogleButton radius="xl" style={{backgroundColor: 'var(--blur-bgcolor)', backdropFilter: 'blur(15px)', color:'var(--text-color)' }}>Google</GoogleButton>
+        <TwitterButton radius="xl" style={{backgroundColor: 'var(--blur-bgcolor)', backdropFilter: 'blur(15px)', color:'var(--text-color)'}}>Twitter</TwitterButton>
       </Group>
 
       <Divider label="Or continue with email" labelPosition="center" my="lg" />

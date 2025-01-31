@@ -5,6 +5,9 @@
   --text-color: #000000;
   --blur-bgcolor: rgba(255, 255, 255, 0.014);
   --formborder-color:rgb(49, 50, 51);
+  --border-color:rgb(212, 211, 211);
+  --box-shadow: rgba(210, 210, 211, 0.2) 0px 8px 24px;
+  --nav-hovcolor:rgba(52, 52, 54, 0.418);
 }
 
 /* Dark Theme */
@@ -13,6 +16,9 @@
   --text-color: #ffffff;
   --blur-bgcolor: rgba(18, 18, 18, 0.26);
   --formborder-color:rgb(24, 23, 23);
+  --border-color:rgb(75, 75, 75);
+  --box-shadow: rgba(29, 29, 29, 0.205) 0px 8px 24px;
+  --nav-hovcolor:rgba(50, 50, 51, 0.404);
 }
 
 /* Apply Variables */

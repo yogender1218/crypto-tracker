@@ -1,0 +1,63 @@
+/* अपडेटेड CSS */
+.container {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  font-family: 'Arial', sans-serif;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.coinsContainer {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.coinCard {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.coinCard:hover {
+  transform: translateY(-2px);
+}
+
+.coinInfo {
+  margin-bottom: 0.5rem;
+}
+
+.coinName {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.coinPrice {
+  color: #444;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+
+.change {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.positive {
+  color: #10b981;
+}
+
+.negative {
+  color: #ef4444;
+}

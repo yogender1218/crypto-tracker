@@ -94,7 +94,7 @@ export function HeaderMegaMenu() {
                   </Center>
                 </a>
               </HoverCard.Target>
-              <HoverCard.Dropdown style={{ overflow: 'hidden', backdropFilter: 'blur(15px)', backgroundColor: 'var(--blur-bgcolor)' }}>
+              <HoverCard.Dropdown style={{ overflow: 'hidden', backdropFilter: 'blur(15px)', backgroundColor: 'var(--blur-bgcolor)',boxShadow:"var(--box-shadow)" }}>
                 <Group justify="space-between" px="md"  >
                   <Text fw={500}>Features</Text>
                   <Anchor href="#" fz="xs">View all</Anchor>
