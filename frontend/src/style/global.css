@@ -4,6 +4,7 @@
   --bg-color: #ffffff;
   --text-color: #000000;
   --blur-bgcolor: rgba(255, 255, 255, 0.014);
+  --formborder-color:rgb(49, 50, 51);
 }
 
 /* Dark Theme */
@@ -11,6 +12,7 @@
   --bg-color: #000000;
   --text-color: #ffffff;
   --blur-bgcolor: rgba(18, 18, 18, 0.26);
+  --formborder-color:rgb(24, 23, 23);
 }
 
 /* Apply Variables */
