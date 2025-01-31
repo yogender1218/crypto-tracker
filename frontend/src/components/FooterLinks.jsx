@@ -61,7 +61,7 @@ export function FooterLinks() {
         <div className={classes.logo}>
          <img src="/TradeSense/omi.png" alt="Logo" className={classes.logo} />TradeSense
           <Text size="xs" c="dimmed" className={classes.description}>
-            Build fully functional accessible web applications faster than ever
+            
           </Text>
         </div>
         <div className={classes.groups}>{groups}</div>
