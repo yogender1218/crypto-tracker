@@ -8,6 +8,11 @@
   --border-color:rgb(212, 211, 211);
   --box-shadow: rgba(210, 210, 211, 0.2) 0px 8px 24px;
   --nav-hovcolor:rgba(52, 52, 54, 0.418);
+  --htext-color: #cac3c336;
+  --ftext-color: #3f3f41;
+  --fcontent-color:rgb(15, 15, 15);
+  --form-input-background: #f0f0f0;
+  --form-input-box-shadow:inset 5px 5px 10px rgba(208, 213, 222, 0.5), inset -5px -5px 12px rgba(255, 255, 255, 0.8);
 }
 
 /* Dark Theme */
@@ -19,6 +24,11 @@
   --border-color:rgb(75, 75, 75);
   --box-shadow: rgba(29, 29, 29, 0.205) 0px 8px 24px;
   --nav-hovcolor:rgba(50, 50, 51, 0.404);
+  --htext-color: #0c0c0cc5;
+  --ftext-color: #867f7f;
+  --fcontent-color:rgb(223, 221, 221);
+  --form-input-background: #010b1638;
+  --form-input-box-shadow:inset 5px 5px 10px rgba(12, 12, 12, 0.884), inset -5px -5px 5px 12px rgba(24, 24, 24, 0.021);
 }
 
 /* Apply Variables */

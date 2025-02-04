@@ -1,0 +1,93 @@
+.wrapper {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+}
+
+.dots {
+  position: absolute;
+  color: var(--mantine-color-gray-1);
+}
+
+@media (max-width: 768px) {
+  .dots {
+    display: none;
+  }
+}
+
+.dotsLeft {
+  left: 0;
+  top: 0;
+}
+
+.title {
+  text-align: center;
+  font-weight: 800;
+  font-size: 40px;
+  letter-spacing: -1px;
+  color: var(--text-color);
+  margin-bottom: var(--mantine-spacing-xs);
+  font-family: "Greycliff CF", var(--mantine-font-family);
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 28px;
+    text-align: left;
+  }
+}
+
+.highlight {
+  color: var(--mantine-color-blue-6);
+}
+
+.description {
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .description {
+    text-align: left;
+    font-size: var(--mantine-font-size-md);
+  }
+}
+
+.controls {
+  margin-top: var(--mantine-spacing-lg);
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .controls {
+    flex-direction: column;
+  }
+}
+
+.control:not(:first-of-type) {
+  margin-left: var(--mantine-spacing-md);
+}
+
+@media (max-width: 576px) {
+  .control {
+    height: 42px;
+    font-size: var(--mantine-font-size-md);
+  }
+
+  .control:not(:first-of-type) {
+    margin-top: var(--mantine-spacing-md);
+    margin-left: 0;
+  }
+}

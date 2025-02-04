@@ -55,10 +55,12 @@ export function AuthenticationForm(props) {
               onChange={(event) => form.setFieldValue('name', event.currentTarget.value)}
               radius="md"
               styles={{input: {
-                backgroundColor: 'var(--bgcolor)',
-                backdropFilter: 'blur(15px)',
+                background: 'var(--form-input-background)',
+                backdropFilter: 'var(--blur-bgcolor)',
                 WebkitBackdropFilter: 'blur(15px)',
                 borderColor: 'var(--formborder-color)',
+                boxShadow:'var(--form-input-box-shadow)',
+                border:'none'
               }}}
             />
           )}
