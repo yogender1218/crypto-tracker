@@ -9,22 +9,30 @@ import  HeroText from '@/components/HeroText';
 import { CardsCarousel } from '@/components/CardsCarousel';
 import { FaqSimple } from '@/components/FaqSimple';
 import { GetInTouch } from '@/components/GetInTouch';
+import classes from './GetStarted.module.css';
+import { EmailBanner } from '@/components/EmailBanner';
 function GetStarted() {
   return (
     <>
     <div className='position'>
-          <HeaderMegaMenu></HeaderMegaMenu>
-          <NavbarMinimal></NavbarMinimal></div>
-          <ScrollProgress></ScrollProgress>
-          <HeroText></HeroText>
-          <AuthenticationForm></AuthenticationForm>
-          <FaqSimple></FaqSimple>
-          <GetInTouch></GetInTouch>
-          {/* <CardsCarousel></CardsCarousel> */}
-          {/* <HotCoins></HotCoins> */}
-          <h1 className="text-4xl text-center mt-10">Hello World</h1>
-          <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> <h1 className="text-4xl text-center mt-10">Hello World</h1> 
-          <FooterLinks></FooterLinks>
+      <div className={classes.header}>
+        <HeaderMegaMenu></HeaderMegaMenu>
+      </div>
+      <div className={classes.navbar}>
+        <NavbarMinimal></NavbarMinimal>
+      </div>
+      <div className={classes.hero}>
+        <ScrollProgress></ScrollProgress>
+        <HeroText></HeroText>
+        <AuthenticationForm></AuthenticationForm>
+        <FaqSimple></FaqSimple>
+        <GetInTouch></GetInTouch>
+        {/* <EmailBanner></EmailBanner> */}
+        {/* <CardsCarousel></CardsCarousel> */}
+        {/* <HotCoins></HotCoins> */}
+        <FooterLinks></FooterLinks>
+      </div>
+    </div>
          
     </>
   )

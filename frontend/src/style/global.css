@@ -11,8 +11,8 @@
   --htext-color: #cac3c336;
   --ftext-color: #3f3f41;
   --fcontent-color:rgb(15, 15, 15);
-  --form-input-background: #f0f0f0;
-  --form-input-box-shadow:inset 5px 5px 10px rgba(208, 213, 222, 0.5), inset -5px -5px 12px rgba(255, 255, 255, 0.8);
+  --form-input-background: #f7f7f7;
+  --form-input-box-shadow:inset 5px 5px 10px rgba(231, 231, 231, 0.411), inset -5px -5px 12px rgba(255, 255, 255, 0.575);
 }
 
 /* Dark Theme */

@@ -1,0 +1,17 @@
+.header{
+    position: fixed;
+    z-index: 100;
+}
+.navbar{
+    display: block;
+    margin-top: 110px;
+    width: 50vw;
+    position: fixed;
+    
+}
+.hero{
+    height: 100vh;
+    width: 75%;
+    margin-left: 15%;
+    margin-right: 10%;
+}

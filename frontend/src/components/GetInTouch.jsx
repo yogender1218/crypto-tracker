@@ -4,11 +4,11 @@ import styles from './GetInTouch.module.css';
 
 export function GetInTouch() {
   return (
-    <Paper shadow="md" radius="lg" style={{borderColor:'var(--border-color)', boxShadow:'var(--box-shadow)', width:'50vw', margin:'auto'}}>
+    <Paper shadow="md" radius="lg" style={{ margin:'auto', background:'var(--bg-color)'}}>
       <div className={styles.wrapper}>
         <div
           className={styles.contacts}
-          style={{ backgroundImage: 'url(/TradeSense/bg.svg)' }}  
+          style={{ backgroundImage: 'url(/TradeSense/bg.svg)' , width: '150vw', backgroundSize: 'cover'}}  
         >
           <Text fz="lg" fw={700} className={styles.title} c="#fff">
             Contact information

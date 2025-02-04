@@ -4,10 +4,9 @@
   border-radius: 10px;
   padding: 4px;
   border: 1px solid var(--border-color);
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
+  box-shadow: var(--box-shadow);
+  width: 62vw;
+  margin-left: 6vw;
 }
 
 .form {

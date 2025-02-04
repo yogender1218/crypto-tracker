@@ -33,14 +33,14 @@ export function AuthenticationForm(props) {
   });
 
   return (
-    <Paper radius="md" p="xl" withBorder {...props} style={{width: '700px', margin: 'auto', backgroundColor: 'var(--blur-bgcolor)', backdropFilter: 'blur(15px)', borderColor:'var(--border-color)', boxShadow:'var(--box-shadow)'}}>
+    <Paper radius="md" p="xl" withBorder {...props} style={{width: '60vw', margin: 'auto', backgroundColor: 'var(--blur-bgcolor)', backdropFilter: 'blur(15px)', borderColor:'var(--border-color)', boxShadow:'var(--box-shadow)'}}>
       <Text size="lg" fw={500}>
         Welcome to TradeSense, {type} with
       </Text>
 
       <Group grow mb="md" mt="md">
-        <GoogleButton radius="xl" style={{backgroundColor: 'var(--blur-bgcolor)', backdropFilter: 'blur(15px)', color:'var(--text-color)' }}>Google</GoogleButton>
-        <TwitterButton radius="xl" style={{backgroundColor: 'var(--blur-bgcolor)', backdropFilter: 'blur(15px)', color:'var(--text-color)'}}>Twitter</TwitterButton>
+        <GoogleButton radius="xl" style={{backgroundColor: 'var(--blur-bgcolor)', backdropFilter: 'blur(15px)', color:'var(--text-color)', borderColor:'var(--border-color)' }}>Google</GoogleButton>
+        <TwitterButton radius="xl" style={{backgroundColor: 'var(--blur-bgcolor)', backdropFilter: 'blur(15px)', color:'var(--text-color)', borderColor:'var(--border-color)' }}>Twitter</TwitterButton>
       </Group>
 
       <Divider label="Or continue with email" labelPosition="center" my="lg" />
@@ -60,7 +60,7 @@ export function AuthenticationForm(props) {
                 WebkitBackdropFilter: 'blur(15px)',
                 borderColor: 'var(--formborder-color)',
                 boxShadow:'var(--form-input-box-shadow)',
-                border:'none'
+                border:'1 px solid var(--formborder-color)',
               }}}
             />
           )}
@@ -74,10 +74,12 @@ export function AuthenticationForm(props) {
             error={form.errors.email && 'Invalid email'}
             radius="md"
             styles={{input: {
-              backgroundColor: 'var(--bgcolor)',
-              backdropFilter: 'blur(15px)',
+              background: 'var(--form-input-background)',
+              backdropFilter: 'var(--blur-bgcolor)',
               WebkitBackdropFilter: 'blur(15px)',
               borderColor: 'var(--formborder-color)',
+              boxShadow:'var(--form-input-box-shadow)',
+              border:'1 px solid var(--formborder-color)',
             }}}
           />
 
@@ -90,10 +92,12 @@ export function AuthenticationForm(props) {
             error={form.errors.password && 'Password should include at least 6 characters'}
             radius="md"
             styles={{input: {
-              backgroundColor: 'var(--bgcolor)',
-              backdropFilter: 'blur(15px)',
+              background: 'var(--form-input-background)',
+              backdropFilter: 'var(--blur-bgcolor)',
               WebkitBackdropFilter: 'blur(15px)',
               borderColor: 'var(--formborder-color)',
+              boxShadow:'var(--form-input-box-shadow)',
+              border:'1 px solid var(--formborder-color)',
             }}}
           />
 
