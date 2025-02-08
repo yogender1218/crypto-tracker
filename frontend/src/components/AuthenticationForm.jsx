@@ -15,6 +15,10 @@ import { useForm } from '@mantine/form';
 import { upperFirst, useToggle } from '@mantine/hooks';
 import { GoogleButton } from './GoogleButton';
 import { TwitterButton } from './TwitterButton';
+import Lottie from "lottie-react";
+import animationData from "../assets/sinup.json";
+import { ConfettiSideCannons } from './ConfettiSideCannons';
+
 
 export function AuthenticationForm(props) {
   const [type, toggle] = useToggle(['login', 'register']);
@@ -33,7 +37,17 @@ export function AuthenticationForm(props) {
   });
 
   return (
-    <Paper radius="md" p="xl" withBorder {...props} style={{width: '60vw', margin: 'auto', backgroundColor: 'var(--blur-bgcolor)', backdropFilter: 'blur(15px)', borderColor:'var(--border-color)', boxShadow:'var(--box-shadow)'}}>
+    <div className={styles.container}>
+       <Lottie 
+      animationData={animationData} 
+      loop={true} 
+      autoplay={true} 
+      style={{ width: '55vw', height: '30%',paddingTop:'5vh',paddingBottom:'7vh',paddingLeft:'2%',paddingRight:'0%' }}
+      rendererSettings={{
+        preserveAspectRatio: "xMidYMid slice",
+      }}
+    />
+    <Paper radius="md" p="xl" withBorder {...props} style={{width: '55vw',border:'none', marginRight: '1%',marginTop:'1%',marginBottom:'0%', backgroundColor: 'var(--bg-color)'}}>
       <Text size="lg" fw={500}>
         Welcome to TradeSense, {type} with
       </Text>
@@ -111,7 +125,7 @@ export function AuthenticationForm(props) {
         </Stack>
 
         <Group justify="space-between" mt="xl">
-          <Anchor component="button" type="button" c="dimmed" onClick={() => toggle()} size="xs">
+        <Anchor component="button" type="button" c="dimmed" onClick={() => toggle()} size="xs">
             {type === 'register'
               ? 'Already have an account? Login'
               : "Don't have an account? Register"}
@@ -122,5 +136,6 @@ export function AuthenticationForm(props) {
         </Group>
       </form>
     </Paper>
+    </div>
   );
 }

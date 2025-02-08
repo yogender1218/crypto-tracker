@@ -1,51 +1,96 @@
 .wrapper {
   display: flex;
   align-items: center;
-  padding: calc(var(--mantine-spacing-xl) * 2);
-  border-radius: var(--mantine-radius-md);
-  background-color: light-dark(var(--mantine-color-white), var(--mantine-color-dark-8));
-  border: 1px solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-8));
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  width: 62vw;
+  margin-left: 6vw;
+  margin-top: 50px;
+  box-shadow: var(--box-shadow);
+}
 
-  
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column-reverse;
+    padding: 24px;
+  }
 }
 
 .image {
   max-width: 40%;
+}
 
+@media (max-width: 768px) {
+  .image {
+    max-width: 100%;
   }
+}
 
 .body {
-  padding-right: calc(var(--mantine-spacing-xl) * 4);
+  padding-right: 48px;
+  padding-left: 30px;
+}
 
-  
+@media (max-width: 768px) {
+  .body {
+    padding-right: 0;
+    margin-top: 24px;
+  }
 }
 
 .title {
-  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
-  font-family:
-    Greycliff CF,
-    var(--mantine-font-family);
+  color: var(--text-color);
+  font-family: "Greycliff CF", sans-serif;
   line-height: 1;
-  margin-bottom: var(--mantine-spacing-md);
+  margin-bottom: 16px;
+}
+
+.subtitle {
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.description {
+  font-size: 14px;
+  color: #666;
 }
 
 .controls {
   display: flex;
-  margin-top: var(--mantine-spacing-xl);
-}
-
-.inputWrapper {
-  width: 100%;
-  flex: 1;
+  margin-top: 24px;
 }
 
 .input {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  border-right: 0;
+  flex: 1;
+  padding: 1px;
+  border: 1px solid var(--border-color);
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  outline: none;
+
 }
 
 .control {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  padding: 10px 16px;
+  border: 1px solid var(--border-color);
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  transition: 0.3s;
+}
+
+.control:hover {
+  background-color: #0056b3;
+}
+input {
+  background: var(--form-input-background);
+  backdrop-filter: var(--blur-bgcolor);
+  border-color: var(--formborder-color);
+  box-shadow:var(--form-input-box-shadow);
+  border:1 px solid var(--formborder-color);
 }

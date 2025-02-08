@@ -1,14 +1,14 @@
 /* Light Theme (Default) */
 /* backdrop-filter: blur(10px); */
 :root {
-  --bg-color: #ffffff;
+  --bg-color: #f7f7f7;
   --text-color: #000000;
   --blur-bgcolor: rgba(255, 255, 255, 0.014);
   --formborder-color:rgb(49, 50, 51);
   --border-color:rgb(212, 211, 211);
   --box-shadow: rgba(210, 210, 211, 0.2) 0px 8px 24px;
   --nav-hovcolor:rgba(52, 52, 54, 0.418);
-  --htext-color: #cac3c336;
+  --htext-color: #b3b2b28e;
   --ftext-color: #3f3f41;
   --fcontent-color:rgb(15, 15, 15);
   --form-input-background: #f7f7f7;
@@ -17,14 +17,14 @@
 
 /* Dark Theme */
 [data-theme="dark"] {
-  --bg-color: #000000;
+  --bg-color: #000005;
   --text-color: #ffffff;
   --blur-bgcolor: rgba(18, 18, 18, 0.26);
   --formborder-color:rgb(24, 23, 23);
   --border-color:rgb(75, 75, 75);
   --box-shadow: rgba(29, 29, 29, 0.205) 0px 8px 24px;
   --nav-hovcolor:rgba(50, 50, 51, 0.404);
-  --htext-color: #0c0c0cc5;
+  --htext-color: #302e2ecc;
   --ftext-color: #867f7f;
   --fcontent-color:rgb(223, 221, 221);
   --form-input-background: #010b1638;

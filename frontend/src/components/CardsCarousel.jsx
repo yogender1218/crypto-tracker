@@ -3,14 +3,14 @@ import { Button, Paper, Text, Title, useMantineTheme } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import classes from './CardsCarousel.module.css';
 
-function Card({ image, title, category }) {
+function Card({ image, title, category }){
   return (
     <Paper
       shadow="md"
       p="xl"
       radius="md"
       style={{ backgroundImage: `url(${image})` }}
-      className={classes.card} // Apply CSS Module class here
+      className={classes.card}
     >
       <div>
         <Text className={classes.category} size="xs">

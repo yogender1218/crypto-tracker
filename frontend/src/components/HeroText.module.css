@@ -1,7 +1,8 @@
 .wrapper {
   position: relative;
-  padding-top: 20vh;
+  padding-top: 10vh;
   padding-bottom: 80px;
+  margin-top: 5vh;
 }
 
 @media (max-width: 768px) {
@@ -18,7 +19,7 @@
 
 .dots {
   position: absolute;
-  color: var(--mantine-color-gray-1);
+  color: red;
 }
 
 @media (max-width: 768px) {

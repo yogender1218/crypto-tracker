@@ -4,7 +4,7 @@ import styles from './GetInTouch.module.css';
 
 export function GetInTouch() {
   return (
-    <Paper shadow="md" radius="lg" style={{ margin:'auto', background:'var(--bg-color)'}}>
+    <Paper shadow="md" radius="lg" style={{ margin:'auto', background:'transparent',boxShadow:'none'}}>
       <div className={styles.wrapper}>
         <div
           className={styles.contacts}
