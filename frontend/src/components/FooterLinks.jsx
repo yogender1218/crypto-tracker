@@ -59,16 +59,16 @@ export function FooterLinks() {
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-         <img src="/TradeSense/omi.png" alt="Logo" className={classes.logo} />TradeSense
-          <Text size="xs" c="dimmed" className={classes.description}>
-            
-          </Text>
+          <div style={{display:'flex'}}> <img src="/TradeSense/omi.png" alt="Logo" className={classes.logo} /><span style={{marginLeft:'5px'}}>TradeSense</span></div>
+          <div><Text size="xs" c="dimmed" className={classes.description}>
+          Where every crypto beat echoes the legacy of the past and the promise of tomorrow 
+          </Text></div>
         </div>
         <div className={classes.groups}>{groups}</div>
       </Container>
       <Container className={classes.afterFooter}>
         <Text c="dimmed" size="sm">
-          © 2020 mantine.dev. All rights reserved.
+        © 2025 TradeSense. All rights reserved..
         </Text>
 
         <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap">

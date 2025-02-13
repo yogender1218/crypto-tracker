@@ -1,5 +1,3 @@
-/* Light Theme (Default) */
-/* backdrop-filter: blur(10px); */
 :root {
   --bg-color: #f7f7f7;
   --text-color: #000000;
@@ -15,7 +13,6 @@
   --form-input-box-shadow:inset 5px 5px 10px rgba(231, 231, 231, 0.411), inset -5px -5px 12px rgba(255, 255, 255, 0.575);
 }
 
-/* Dark Theme */
 [data-theme="dark"] {
   --bg-color: #000005;
   --text-color: #ffffff;
@@ -31,9 +28,8 @@
   --form-input-box-shadow:inset 5px 5px 10px rgba(12, 12, 12, 0.884), inset -5px -5px 5px 12px rgba(24, 24, 24, 0.021);
 }
 
-/* Apply Variables */
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: var(--bg-color) !important;
+  color: var(--text-color) !important;
   transition: background-color 0.3s ease, color 0.3s ease;
 }

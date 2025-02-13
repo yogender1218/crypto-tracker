@@ -8,12 +8,15 @@
 }
 
 .logo {
-  max-width: 200px;
+  width: 600px;
+  display: block;
 
 }
 
 .description {
-  margin-top: 5px;
+  height: 10px;
+  width: 210px;
+  margin-top: 20px;
 }
 
 .inner {

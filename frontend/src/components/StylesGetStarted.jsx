@@ -1,14 +1,11 @@
 "use client";
 
 import confetti from "canvas-confetti";
-
 import { Button } from "@/components/ui/button";
-
-export function ConfettiSideCannons() {
+export function StyledGetStarted() {
   const handleClick = () => {
     const end = Date.now() + 3 * 1000; // 3 seconds
-    // const colors = ["#a786ff", "#fd8bbc", "#eca184", "#f8deb1"];
-    const colors = ["#0000FF", "#87CEEB", "#00008B", "#F5F5F5", "#696969"];
+    const colors = ["#a786ff", "#fd8bbc", "#eca184", "#f8deb1"];
 
     const frame = () => {
       if (Date.now() > end) return;
@@ -38,7 +35,7 @@ export function ConfettiSideCannons() {
 
   return (
     <div className="relative">
-      <Button type='submit' onClick={handleClick}>Login</Button>
+      <Button type='submit' onClick={handleClick}>Get Started</Button>
     </div>
   );
 }

@@ -42,7 +42,7 @@ export function AuthenticationForm(props) {
       animationData={animationData} 
       loop={true} 
       autoplay={true} 
-      style={{ width: '55vw', height: '30%',paddingTop:'5vh',paddingBottom:'7vh',paddingLeft:'2%',paddingRight:'0%' }}
+      style={{ width: '50vw', height: '20%',paddingTop:'5vh',paddingBottom:'-1vh',paddingLeft:'2%',paddingRight:'0%' }}
       rendererSettings={{
         preserveAspectRatio: "xMidYMid slice",
       }}

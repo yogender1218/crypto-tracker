@@ -11,7 +11,7 @@
 
 .navButton {
   position: absolute;
-  background: var(--formborder-color);
+  background: var(--htext-color);
   color: var(--text-color);
   border: none;
   padding: 10px;

@@ -2,18 +2,19 @@ import React from 'react';
 import { HeaderMegaMenu } from '../components/HeaderMegaMenu';
 import { ScrollProgress } from '../components/ui/scroll-progress';
 import { AuthenticationForm } from '../components/AuthenticationForm';
+import HotCoins from '../components/HotCoins';
 import { NavbarMinimal } from '../components/NavBarMinimal';
 import { FooterLinks } from '@/components/FooterLinks';
 import  HeroText from '@/components/HeroText';
+import { CardsCarousel } from '@/components/CardsCarousel';
 import { FaqSimple } from '@/components/FaqSimple';
 import { GetInTouch } from '@/components/GetInTouch';
-import classes from './GetStarted.module.css';
+import classes from './LoginPage.module.css';
 import  EmailBanner  from '@/components/EmailBanner';
 import { FeaturesTitle } from '@/components/FeaturesTitle';
 import CardSlider from '@/components/CardSlider';
 import { Outlet } from 'react-router-dom';
-import { NothingFoundBackground } from '@/components/NothingFoundBackground';
-function GetStarted() {
+function LoginPage() {
   return (
     <>
     <div className='position'>
@@ -24,23 +25,16 @@ function GetStarted() {
         <NavbarMinimal></NavbarMinimal>
       </div>
       <div className={classes.hero}>
-        <ScrollProgress></ScrollProgress>
-        <HeroText></HeroText>
-        <FeaturesTitle></FeaturesTitle>
         <AuthenticationForm></AuthenticationForm>
-        <FaqSimple></FaqSimple>
-        <GetInTouch></GetInTouch>
-        <EmailBanner></EmailBanner>
-        <CardSlider />
         {/* <TestimonialsSlider></TestimonialsSlider> */}
         {/* <CardsCarousel></CardsCarousel> */}
         {/* <HotCoins></HotCoins> */}
         <FooterLinks></FooterLinks>
       </div>
     </div>
-    <Outlet />  
+    <Outlet />
     </>
   )
 }
 
-export default GetStarted
+export default LoginPage

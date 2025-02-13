@@ -32,14 +32,16 @@ import classes from './HeaderMegaMenu.module.css';
 import '@mantine/core/styles.css';
 import { ConfettiSideCannons } from './ConfettiSideCannons';
 import { StyledRegister } from './StyledRegister';
+import { Link } from "react-router-dom";
+import { StyledGetStarted } from './StylesGetStarted';
 
 const mockdata = [
-  { icon: IconCode, title: 'Open source', description: 'This Pokémon’s cry is very loud and distracting' },
-  { icon: IconCoin, title: 'Free for everyone', description: 'The fluid of Smeargle’s tail secretions changes' },
-  { icon: IconBook, title: 'Documentation', description: 'Yanma is capable of seeing 360 degrees without' },
-  { icon: IconFingerprint, title: 'Security', description: 'The shell’s rounded shape and the grooves on its.' },
-  { icon: IconChartPie3, title: 'Analytics', description: 'This Pokémon uses its flying ability to quickly chase' },
-  { icon: IconNotification, title: 'Notifications', description: 'Combusken battles with the intensely hot flames it spews' },
+  { icon: IconCode, title: 'Real-Time Price Updates', description: 'Catch the heartbeat of the market as it flows live' },
+  { icon: IconCoin, title: 'Historical Data Visualization', description: 'Revisit the stories of the past through interactive charts and graphs' },
+  { icon: IconBook, title: 'Automated Trading Bot', description: 'Set your rules and algorithms, and watch smart trades unfold' },
+  { icon: IconFingerprint, title: 'AR/VR Visualization', description: 'Immerse yourself in 3D market realities—where data meets art' },
+  { icon: IconChartPie3, title: 'Price Prediction', description: 'Machine learning marvels forecasting your next crypto wave' },
+  { icon: IconNotification, title: 'Notifications', description: 'Set notifications for price alerts, market trends, and more' },
 ];
 
 
@@ -80,13 +82,15 @@ export function HeaderMegaMenu() {
         <Group h="100%" w="100%"  justify="space-between" >
           {/* Left Section - Logo & Brand Name */}
           <Group align="center" gap="xs"  style={{paddingLeft:'3.1vw'}} >
-            <img src="/TradeSense/omi.png" alt="Logo" className={classes.logo} />
-            <Text fw={500}>TradeSense</Text>
+          <Link to="/"> <img src="/TradeSense/omi.png" alt="Logo" className={classes.logo} /></Link>
+           <Link to="/">
+           <Text fw={500}>TradeSense</Text>
+           </Link>
           </Group>
 
           {/* Center Section - Navigation Links */}
           <Group h="100%" gap={0} visibleFrom="sm" justify="center" style={{ flexGrow: 1 }}>
-            <a href="#" className={classes.link}>Home</a>
+          <Link to="/" className={classes.link}>Home</Link>
             <HoverCard width={600} position="bottom" radius="md" shadow="md"  withinPortal >
               <HoverCard.Target>
                 <a href="#" className={classes.link}>
@@ -107,21 +111,22 @@ export function HeaderMegaMenu() {
                   <Group justify="space-between" style={{marginTop:'30px'}}>
                     <div>
                       <Text fw={500} fz="sm" >Get started</Text>
-                      <Text size="xs" c="dimmed">Their food sources have decreased, and their numbers</Text>
+                      <Text size="xs" c="dimmed">For those ready to dive into real-time magic</Text>
                     </div>
-                    <Button variant="default" style={{backgroundColor:'rgb(25, 113, 194)'}}>Get started</Button>
+                    <Link to="/login"> <Button variant="default" style={{backgroundColor:'rgb(25, 113, 194)'}}><StyledGetStarted></StyledGetStarted></Button></Link>
                   </Group>
                 </div>
               </HoverCard.Dropdown>
             </HoverCard>
-            <a href="#" className={classes.link}>Learn</a>
-            <a href="#" className={classes.link}>Academy</a>
+            <a href="#" className={classes.link}>Market Trends</a>
+            <a href="#" className={classes.link}>Community</a>
+            <Link to="/support" className={classes.link}>Support</Link>
           </Group>
 
           {/* Right Section - Auth Buttons & Theme Toggle */}
           <Group visibleFrom="sm" gap="sm">
-          <Button variant="default"><ConfettiSideCannons></ConfettiSideCannons></Button>
-            <Button><StyledRegister></StyledRegister></Button>
+          <Link to="/login"><Button variant="default"><ConfettiSideCannons></ConfettiSideCannons></Button></Link>
+          <Link to="/login"> <Button><StyledRegister></StyledRegister></Button></Link>
             <button className={classes.themeToggle} onClick={toggleTheme}>
               {theme === "light" ? <IconMoon size={22} /> : <IconSun size={22} />}
             </button>

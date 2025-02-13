@@ -1,6 +1,8 @@
 import { Button, Container, Text, Title } from "@mantine/core";
 import { Dots } from "./Dots";
 import classes from "./HeroText.module.css";
+import { Link } from "react-router-dom";
+import { StyledGetStarted } from "./StylesGetStarted";
 
 const HeroText = () => {
   return (
@@ -12,27 +14,27 @@ const HeroText = () => {
 
       <div className={classes.inner}>
         <Title className={classes.title}>
-          Automated AI{" "}
+        Master Crypto Markets with{" "}
           <Text component="span" className={classes.highlight} inherit>
-            code reviews
+          AI-Powered Insights
           </Text>{" "}
-          for any stack
+          & Real-Time Tracking 🚀
         </Title>
 
         <Container p={0} size={600}>
           <Text size="lg" c="dimmed" className={classes.description}>
-            Build more reliable software with AI companion. AI is also trained
-            to detect lazy developers who do nothing and just complain on
-            Twitter.
+          Step into a realm where ancient market wisdom dances with digital innovation. Here, live price pulses, AI-powered insights, and vivid historical charts converge to craft a narrative of both legacy and luminous future. Feel the rhythm, embrace the innovation, and let your crypto journey begin.
           </Text>
         </Container>
 
         <div className={classes.controls}>
-          <Button className={classes.control} size="lg" variant="default" color="gray">
-            Book a demo
+         <Link to="/login">
+         <Button className={classes.control} size="lg" variant="default" color="gray">
+         <StyledGetStarted></StyledGetStarted>
           </Button>
+         </Link>
           <Button className={classes.control} size="lg">
-            Purchase a license
+            Learn More
           </Button>
         </div>
       </div>

@@ -1,18 +1,27 @@
-import { MantineProvider } from '@mantine/core';
 import './App.css';
-import { HeaderMegaMenu } from './components/HeaderMegaMenu';
-import { ScrollProgress } from './components/ui/scroll-progress';
 import "./style/global.css"; 
-import { AuthenticationForm } from './components/AuthenticationForm';
-import HotCoins from './components/HotCoins';
-import { NavbarMinimal } from './components/NavBarMinimal';
 import GetStarted from './pages/GetStarted';
+import LoginPage from './pages/LoginPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AnalyticsPage from './pages/AnalyticsPage';
+import FaqPage from './pages/FaqPage';
+import SubReviews from './pages/SubReviews';
+import NotFound from './pages/NotFound';
+import SupportPage from './pages/SupportPage';
 function App() {
 
   return (
-    <>
-    <GetStarted></GetStarted>
-    </> 
+    <Router>
+    <Routes>
+      <Route path="/" element={<GetStarted />} />
+      <Route path="login" element={<LoginPage />} />
+      <Route path="analytics" element={<AnalyticsPage />} />
+      <Route path="faq" element={<FaqPage />} />
+      <Route path="subscription" element={<SubReviews />} />
+      <Route path="notfound" element={<NotFound/>} />
+      <Route path="support" element={<SupportPage/>} />
+    </Routes>
+  </Router>
   )
 }
 

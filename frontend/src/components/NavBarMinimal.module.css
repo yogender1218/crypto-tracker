@@ -6,7 +6,7 @@
   flex-direction: column;
   border-right: 1px solid var(--border-color);
   position: fixed;
-  margin-top: -110px;
+  margin-top: -190px;
   box-shadow: var(--box-shadow);
 }
 

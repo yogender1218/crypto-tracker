@@ -1,9 +1,7 @@
 "use client";
 
 import confetti from "canvas-confetti";
-
 import { Button } from "@/components/ui/button";
-
 export function StyledRegister() {
   const handleClick = () => {
     const end = Date.now() + 3 * 1000; // 3 seconds
