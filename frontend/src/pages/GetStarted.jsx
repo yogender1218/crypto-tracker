@@ -13,7 +13,7 @@ import classes from './GetStarted.module.css';
 import  EmailBanner  from '@/components/EmailBanner';
 import { FeaturesTitle } from '@/components/FeaturesTitle';
 import  ReviewCard  from '@/components/ReviewCard';
-import { ConfettiSideCannons } from '@/components/ConfettiSideCannons';
+import CardSlider from '@/components/CardSlider';
 function GetStarted() {
   return (
     <>
@@ -27,15 +27,13 @@ function GetStarted() {
       <div className={classes.hero}>
         <ScrollProgress></ScrollProgress>
         <HeroText></HeroText>
-        <ConfettiSideCannons></ConfettiSideCannons>
         <FeaturesTitle></FeaturesTitle>
         <AuthenticationForm></AuthenticationForm>
         <FaqSimple></FaqSimple>
-        <ConfettiSideCannons></ConfettiSideCannons>
         <GetInTouch></GetInTouch>
         <EmailBanner></EmailBanner>
-        <ConfettiSideCannons></ConfettiSideCannons>
-        <ReviewCard></ReviewCard>
+      <CardSlider />
+        {/* <TestimonialsSlider></TestimonialsSlider> */}
         {/* <CardsCarousel></CardsCarousel> */}
         {/* <HotCoins></HotCoins> */}
         <FooterLinks></FooterLinks>
